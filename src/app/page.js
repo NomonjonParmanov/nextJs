@@ -4,6 +4,7 @@ import Contact from "@/components/contact/Contact";
 import Delever from "@/components/delever/Delever";
 import Design from "@/components/design/Design";
 import Erp from "@/components/erp/Erp";
+import Footer from "@/components/footer/Footer";
 import Goodzone from "@/components/goodzone/Goodzone";
 import Hero from "@/components/hero/Hero";
 import Iman from "@/components/iman/Iman";
@@ -34,6 +35,7 @@ export default function Home() {
       <Carousel />
       <Work />
       <Contact />
+      <Footer />
     </>
   );
 }

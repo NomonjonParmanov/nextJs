@@ -60,7 +60,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="carousel">
+    <div id="Clients" className="carousel">
       <div className="carouselImages">
         {Array.from({ length: Math.ceil(images.length / 10) }, (_, index) => (
           <div
