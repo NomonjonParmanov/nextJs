@@ -115,7 +115,7 @@ const Navbar = () => {
             <Link href="#Language">Language</Link>
           </li>{" "}
           <li key="contact">
-            <Link href="#Contact">
+            <Link href="#contact">
               <button>Contact</button>
             </Link>
           </li>
@@ -138,7 +138,7 @@ const Navbar = () => {
             {" "}
             <Link href={"#Command"}>Command</Link>
           </li>{" "}
-          <Link onClick={handleToggle} href={"#Contact"}>
+          <Link onClick={handleToggle} href={"#contact"}>
             <button>Contact</button>
           </Link>
         </ul>

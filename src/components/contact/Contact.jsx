@@ -11,7 +11,7 @@ import {
 
 const Contact = () => {
   return (
-    <section className="container contact">
+    <section id="contact" className="container contact">
       <h1>Contact us</h1>
       <form>
         <h3>Leave us a message</h3>
