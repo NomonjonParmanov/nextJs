@@ -1,0 +1,52 @@
+@import "./components/navbar.scss";
+@import "./components/hero.scss";
+@import "./components/service.scss";
+@import "./components/team.scss";
+@import "./components/mobile.scss";
+@import "./components/erp.scss";
+@import "./components/design.scss";
+@import "./components/optimization.scss";
+@import "./components/consulting.scss";
+@import "./components/delever.scss";
+@import "./components/smm.scss";
+@import "./components/iman.scss";
+@import "./components/contact.scss";
+@import "./components/work.scss";
+@import "./components/carousel.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  scroll-behavior: smooth;
+}
+*::after,
+::before {
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}

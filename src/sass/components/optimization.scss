@@ -1,0 +1,105 @@
+.optimization {
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f4f7ff;
+  h1 {
+    font-size: 64px;
+    color: #1b5bf7;
+    padding-bottom: 30px;
+    width: 800px;
+  }
+  .optimization__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    .optimization__image {
+      img {
+        width: 500px;
+        height: 300px;
+      }
+    }
+    .optimization__text {
+      p {
+        color: #18191f;
+        font-size: 24px;
+        padding-bottom: 10px;
+      }
+      .optimization__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        align-items: center;
+        .optimization__card {
+          width: 160px;
+          height: 128px;
+          background-color: #e0e8ff;
+          img {
+            width: 56px;
+            height: 56px;
+            padding-left: 10px;
+            padding-top: 20px;
+          }
+          p {
+            font-size: 18px;
+            padding-left: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .optimization {
+    h1 {
+      width: 100%;
+      font-size: 32px;
+    }
+    .optimization__content {
+      flex-direction: column;
+      align-items: normal;
+      .optimization__text {
+        p {
+          width: 100%;
+          font-size: 16px;
+        }
+        .optimization__cards {
+          .optimization__card {
+            width: 100%;
+            text-align: center;
+            p {
+              padding-left: 0;
+              padding-top: 10px;
+            }
+            img {
+              width: 36px;
+              height: 36px;
+              padding-left: 0;
+              padding-top: 20px;
+            }
+          }
+        }
+      }
+      .optimization__image {
+        img {
+          width: 100%;
+          height: 297px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .optimization {
+    .optimization__content {
+      .optimization__text {
+        .optimization__cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}

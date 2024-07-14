@@ -1,0 +1,127 @@
+.delever {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  h1 {
+    font-size: 64px;
+    color: #d92d0b;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .delever__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    .delever__text {
+      p {
+        color: #464359;
+        font-size: 20px;
+        padding-bottom: 30px;
+      }
+      .delever__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        align-items: center;
+        .delever__card {
+          width: 150px;
+          height: 118px;
+          background-color: #e0e8ff;
+          img {
+            width: 56px;
+            height: 56px;
+            padding-left: 10px;
+            padding-top: 20px;
+          }
+          p {
+            font-size: 18px;
+            padding-left: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.goodzone {
+  .delever__image {
+    img {
+      width: 550px;
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .delever {
+    h1 {
+      width: 100%;
+      font-size: 32px;
+      text-align: start;
+    }
+    .delever__content {
+      flex-direction: column;
+      align-items: normal;
+      margin-top: -20px;
+      .delever__image {
+        img {
+          width: 100%;
+          object-fit: contain;
+          height: 400px;
+        }
+      }
+      .delever__text {
+        p {
+          width: 100%;
+          font-size: 16px;
+        }
+        .delever__cards {
+          .delever__card {
+            width: 100%;
+            text-align: center;
+            img {
+              width: 36px;
+              height: 36px;
+              padding-left: 0;
+              padding-top: 20px;
+            }
+            p {
+              padding-left: 0;
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .goodzone {
+    .delever__content {
+      margin-top: -40px;
+      .delever__image {
+        img {
+          width: 100%;
+          height: 300px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .delever {
+    .delever__content {
+      .delever__image {
+        img {
+          height: 300px;
+        }
+      }
+      .delever__text {
+        .delever__cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}

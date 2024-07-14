@@ -1,0 +1,158 @@
+.mobile {
+  padding-top: 100px;
+  h1 {
+    font-size: 64px;
+    color: #1b5bf7;
+    width: 800px;
+  }
+  .mobile__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .mobile__image2 {
+      display: none;
+    }
+    .mobile__text {
+      p {
+        color: #18191f;
+        font-size: 24px;
+        width: 500px;
+        padding-bottom: 20px;
+      }
+      .phones {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        .phone {
+          width: 150px;
+          height: 118px;
+          background-color: #f4f7ff;
+          .icon {
+            width: 56px;
+            height: 56px;
+            color: #1b5bf7;
+            padding-top: 10px;
+            padding-left: 16px;
+          }
+          p {
+            font-size: 18px;
+            padding-left: 25px;
+            padding-top: 10px;
+          }
+        }
+      }
+      h3 {
+        color: #464359;
+        font-size: 32px;
+        padding-bottom: 20px;
+      }
+      .technologies {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .techno {
+          width: 150px;
+          height: 118px;
+          img {
+            width: 56px;
+            height: 56px;
+          }
+          p {
+            font-size: 18px;
+            color: #464359;
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+    .mobile__image {
+      background-image: url("../../images/mobilebg.png");
+      background-repeat: no-repeat;
+      height: 503px;
+      img {
+        width: 100%;
+        height: 503px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .mobile {
+    h1 {
+      font-size: 32px;
+      width: 100%;
+    }
+    .mobile__content {
+      flex-direction: column;
+      .mobile__image {
+        display: none;
+      }
+      .mobile__image2 {
+        display: block;
+        img {
+          width: 100%;
+          height: 473px;
+        }
+      }
+      .mobile__text {
+        p {
+          font-size: 16px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 530px) {
+  .mobile {
+    .mobile__content {
+      .mobile__text {
+        .phones {
+          flex-direction: column;
+          align-items: normal;
+          text-align: center;
+          .phone {
+            .icon {
+              padding-left: 0px;
+            }
+            p {
+              padding: 0;
+            }
+          }
+        }
+        .technologies {
+          flex-direction: column;
+          align-items: normal;
+          .techno {
+            p {
+              text-align: center;
+            }
+            img {
+              width: 100%;
+              height: 56px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .mobile {
+    .mobile__content {
+      .mobile__text {
+        .phones {
+          display: grid;
+          grid-template-columns: auto;
+          gap: 10px;
+          .phone {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
