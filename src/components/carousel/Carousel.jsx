@@ -42,8 +42,6 @@ const images = [
   fonon,
   hoshimov,
   hamkorbank,
-  imanC,
-  workly,
 ];
 
 const Carousel = () => {
