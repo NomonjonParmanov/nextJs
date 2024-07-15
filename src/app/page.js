@@ -14,8 +14,10 @@ import Optimization from "@/components/optimization/Optimization";
 import Services from "@/components/services/Services";
 import Smm from "@/components/smm/Smm";
 import Team from "@/components/team/Team";
+import Tools from "@/components/tools/Tools";
 import Work from "@/components/work/Work";
 import "@/sass/global.scss";
+
 export default function Home() {
   return (
     <>
@@ -32,6 +34,7 @@ export default function Home() {
       <Smm />
       <Goodzone />
       <Iman />
+      <Tools />
       <Carousel />
       <Work />
       <Contact />

@@ -1,5 +1,3 @@
-"use client";
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import taxi from "@/images/taxi.svg";
 import smsuz from "@/images/smsuz.svg";
@@ -11,77 +9,120 @@ import hoshimov from "@/images/hoshimov.svg";
 import hamkorbank from "@/images/hamkorbank.svg";
 import workly from "@/images/vorkly.svg";
 import imanC from "@/images/imanC.svg";
-const images = [
-  taxi,
-  smsuz,
-  shef,
-  track,
-  akfa,
-  fonon,
-  hoshimov,
-  hamkorbank,
-  imanC,
-  workly,
-  taxi,
-  smsuz,
-  shef,
-  fonon,
-  hoshimov,
-  hamkorbank,
-  imanC,
-  workly,
-  taxi,
-  track,
-  akfa,
-  fonon,
-  hoshimov,
-  smsuz,
-  shef,
-  track,
-  akfa,
-  fonon,
-  hoshimov,
-  hamkorbank,
+const cardDetails = [
+  {
+    imgUrl: taxi,
+    id: 1,
+  },
+  {
+    imgUrl: smsuz,
+    id: 2,
+  },
+
+  {
+    imgUrl: shef,
+    id: 3,
+  },
+
+  {
+    imgUrl: track,
+    id: 4,
+  },
+
+  {
+    imgUrl: akfa,
+    id: 5,
+  },
+
+  {
+    imgUrl: fonon,
+    id: 6,
+  },
+
+  {
+    imgUrl: hoshimov,
+    id: 7,
+  },
+  {
+    imgUrl: hamkorbank,
+    id: 8,
+  },
+  {
+    imgUrl: workly,
+    id: 9,
+  },
+  {
+    imgUrl: imanC,
+    id: 10,
+  },
+  {
+    imgUrl: smsuz,
+    id: 11,
+  },
+  {
+    imgUrl: taxi,
+    id: 12,
+  },
+  {
+    imgUrl: smsuz,
+    id: 13,
+  },
+
+  {
+    imgUrl: shef,
+    id: 14,
+  },
+
+  {
+    imgUrl: track,
+    id: 15,
+  },
+
+  {
+    imgUrl: akfa,
+    id: 16,
+  },
+
+  {
+    imgUrl: fonon,
+    id: 17,
+  },
+
+  {
+    imgUrl: hoshimov,
+    id: 18,
+  },
+  {
+    imgUrl: hamkorbank,
+    id: 19,
+  },
+  {
+    imgUrl: workly,
+    id: 20,
+  },
+  {
+    imgUrl: imanC,
+    id: 21,
+  },
+  {
+    imgUrl: smsuz,
+    id: 22,
+  },
 ];
 
 const Carousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === Math.ceil(images.length / 10) - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000); // Change image every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
+  const carousel = cardDetails?.map((el) => (
+    <Image className="slide" key={el.id} src={el.imgUrl} alt="img" priority />
+  ));
   return (
-    <div id="Clients" className="carousel">
-      <div className="carouselImages">
-        {Array.from({ length: Math.ceil(images.length / 10) }, (_, index) => (
-          <div
-            key={index}
-            className={`carouselRow ${index === currentIndex ? "active" : ""}`}
-          >
-            {images
-              .slice(index * 10, index * 10 + 10)
-              .map((image, imgIndex) => (
-                <div key={imgIndex} className="carouselItem">
-                  <Image
-                    src={image}
-                    alt={`Slide ${imgIndex}`}
-                    className="img"
-                    width={150}
-                    height={80}
-                  />
-                </div>
-              ))}
-          </div>
-        ))}
+    <section id="Clients" className="carousel">
+      <div className="slider">
+        <div className="slide__track">{carousel}</div>
       </div>
-    </div>
+      <div className="slider2">
+        <div className="slide__track">{carousel}</div>
+      </div>
+    </section>
   );
 };
 
